@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="LOVEiT_BAKERY.NewCustomOrderView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LOVEiT_BAKERY"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <UserControl.Resources>
+        <DataTemplate x:Key="CustSearchComboBox">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Path=ID}" Width="100"/>
+                <TextBlock Text="{Binding Path=firstName}" Width="100"/>
+                <TextBlock Text="{Binding Path=surname}" Width="100"/>
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel>
+            <Grid>
+                <Grid Margin="-110,73,110,-73">
+                    <Label Name="Search" Content="CUSTOMER SEARCH" HorizontalAlignment="Left" Margin="1200,112,0,-322" VerticalAlignment="Top" Height="500" Width="610" FontSize="32" FontWeight="Bold" BorderBrush="Black" BorderThickness="8" Background="#FF7C95C1"/>
+                    <TextBlock Text="Customer ID:" Margin="1220,183,497,53" FontSize="32" FontWeight="Bold"/>
+                    <TextBox Name="IDTextBox" Height="45" Width="300" BorderBrush="Black" BorderThickness="8" Margin="1470,183,150,62"/>
+                    <TextBlock Text="First Name:" Margin="1243,286,497,-50" FontSize="32" FontWeight="Bold"/>
+                    <TextBox Name="FirstNameTextBox" Height="45" Width="300" BorderBrush="Black" BorderThickness="8" Margin="1470,286,150,-41"/>
+                    <TextBlock Text="Surname:" Margin="1276,382,497,-146" FontSize="32" FontWeight="Bold"/>
+                    <TextBox Name="LastNameTextBox"  Height="45" Width="300" BorderBrush="Black" BorderThickness="8" Margin="1470,382,150,-137"/>
+                    <Button  Name="SearchButton" Content="Search" Height="100" Width="200" Margin="1570,472,150,-282" FontSize="24" FontWeight="Bold" Background="#FF86B47C" BorderBrush="Black" BorderThickness="8" Click="SearchButton_Click"/>
+                </Grid>
+
+                <Grid Margin="-325,-10,325,10">
+                    <Label Name="label" Content="CUSTOM ORDER" HorizontalAlignment="Left" Margin="555,195,0,-515" VerticalAlignment="Top" Height="610" Width="810" FontSize="32" FontWeight="Bold" BorderBrush="Black" BorderThickness="8" Background="#FFF0A57B"/>
+
+                    <Grid Margin="0,108,0,-108">
+                        <TextBlock Text="Registered Customer:" Margin="605,180,983,-161" FontSize="32" FontWeight="Bold"/>
+                        <ComboBox Name="RegisteredCustomerCmb" Margin="988,180,632,58" Height="45" ItemTemplate="{StaticResource CustSearchComboBox}" Width="300" BorderBrush="Black" BorderThickness="8" SelectionChanged="RegisteredCustomerCmb_SelectionChanged"/>
+                    </Grid>
+
+                    <Grid Margin="0,108,0,-108">
+                        <TextBlock Text="Cake Size:" Margin="787,288,983,-52" FontSize="32" FontWeight="Bold"/>
+                        <ComboBox Name="CakeSizeTextBox" Margin="988,283,632,-45" Height="45" Width="300" BorderBrush="Black" BorderThickness="8" SelectionChanged="CakeSizeTextBox_SelectionChanged">
+                        </ComboBox>
+                    </Grid>
+
+                    <Grid Margin="0,97,0,-97">
+                        <TextBlock Text="Description:" Margin="749,390,983,-150" FontSize="32" FontWeight="Bold"/>
+                        <TextBox Name="DescriptionTextBox" Margin="988,390,632,-152" Height="45" Width="300" BorderBrush="Black" BorderThickness="8" TextChanged="DescriptionTextBox_TextChanged"/>
+                    </Grid>
+
+                    <Grid Margin="0,97,0,-97">
+                        <TextBlock Text="Price:" Margin="846,487,983,-247" FontSize="32" FontWeight="Bold"/>
+                        <TextBox Name="PriceTextBox" Margin="988,487,632,-249" Height="45" Width="300" BorderBrush="Black" BorderThickness="8" TextChanged="PriceTextBox_TextChanged"/>
+                    </Grid>
+
+                    <Grid Margin="0,97,0,-97">
+                        <TextBlock Text="Outsourced:" Margin="746,571,991,-331" FontSize="32" FontWeight="Bold"/>
+                        <CheckBox Name="Outsourced" Margin="990,588,898,-331" BorderBrush="Black" BorderThickness="8"/>
+                    </Grid>
+
+                    <Grid Margin="0,97,0,-97">
+                        <TextBlock Name="WarningBlock" Margin="648,752,616,-512" FontSize="32" FontWeight="Bold" TextAlignment="Center"/>
+                    </Grid>
+                </Grid>
+
+                <Grid Margin="0,100,0,-100">
+                    <Button Name="ConfirmButton" Content="Confirm" Height="100" Width="200" Margin="1090,595,630,-405" FontSize="24" FontWeight="Bold" Background="#FF86B47C" BorderBrush="Black" BorderThickness="8" Click="ConfirmButton_Click"/>
+                    <Button Name="BackButton" Content="Back" Height="100" Width="200" Margin="1295,595,425,-405" FontSize="24" FontWeight="Bold" Background="#FFCD3232" BorderBrush="Black" BorderThickness="8" Click="BackButton_Click"/>
+                    <Button Name="MMButton" Content="Main Menu" Height="100" Width="200" Margin="1500,595,220,-405" FontSize="24" FontWeight="Bold" Background="#FFF07B7B" BorderBrush="Black" BorderThickness="8" Click="MMButton_Click"/>
+                </Grid>
+
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

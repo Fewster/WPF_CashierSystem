@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="LOVEiT_BAKERY.Checkout_Menu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:LOVEiT_BAKERY"
+             mc:Ignorable="d"
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid>
+        <StackPanel>
+            <Grid>
+                <Button x:Name="PASTRIES" Content="PASTRIES" Height="250" Width="250" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Background="#FFF0A57B" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold" Click="PASTRIES_Click"/>
+                <Button x:Name="BUNS" Content="BUNS" Height="250" Width="250"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="265,10,0,0" Background="#FFF0A57B" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold" Click="BUNS_Click"/>
+                <Button x:Name="CAKES" Content="CAKES" Height="250" Width="250"  HorizontalAlignment="Left" Margin="10,265,0,188" Background="#FFF0A57B" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold" Click="CAKES_Click"/>
+                <Button x:Name="BREAD" Content="BREAD" Height="250" Width="250"  HorizontalAlignment="Left" Margin="265,265,0,188" Background="#FFF0A57B" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold" Click="BREAD_Click"/>
+                <Button x:Name="DRINKS" Content="DRINKS" Height="250" Width="250"  HorizontalAlignment="Left" Margin="10,520,0,-67" Background="#FFF0A57B" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold" Click="DRINKS_Click"/>
+                <Button x:Name="MISC" Content="MISC." Height="250" Width="250"  HorizontalAlignment="Left" Margin="265,520,0,-67" Background="#FFF0A57B" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold" Click="MISC_Click"/>
+
+                <Button x:Name="LOGOUT" Content="LOG-OUT" Height="250" Width="250"  HorizontalAlignment="Left" Margin="10,775,0,-322" Background="#FFCD3232" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold" Click="LOGOUT_Click"/>
+                <Button x:Name="MAINMENU" Content="MAIN MENU" Height="250" Width="250"  HorizontalAlignment="Left" Margin="265,775,0,-322" Background="#FFF07B7B" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold" Click="MAINMENU_Click"/>
+
+                <Button x:Name="CUSTOMORDER" Content="CUSTOM ORDER" Height="250" Width="500" HorizontalAlignment="Left" Margin="520,775,0,-322" Background="#FFF0A57B" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold" Click="CUSTOMORDER_Click"/>
+                <Button x:Name="CONFIRM" Content="CONFIRM" Height="250" Width="500" HorizontalAlignment="Left" Margin="1025,775,0,-322" Background="#FF86B47C" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold" Click="CONFIRM_Click"/>
+
+                <Button Name="STOCKS" Content="STOCKS" Height="250" Width="250"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="520,10,0,0" Background="#FF7C95C1" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold" Click="STOCKS_Click"/>
+                <Button Name="ORDERLIST" Content="ORDER LIST" Height="250" Width="250"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="520,520,0,-67" Background="#FF7C95C1" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold" Click="ORDERLIST_Click"/>
+                <Button Name="PROMOS" Content="PROMOTIONS" Height="250" Width="250"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="520,265,0,0" Background="#FF7C95C1" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold" Click="PROMOS_Click"/>
+
+                <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="760" Margin="775,10,0,-67" VerticalAlignment="Top" Width="750" BorderBrush="Black" BorderThickness="8"/>
+                <Button Name="AddButton" Content="+" Height="100" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1530,10,0,0" Background="#FFFFFF" BorderBrush="Black" BorderThickness="8" FontSize="42" FontWeight="Bold" Click="AddButton_Click"/>
+                <Button Name="RemoveButton" Content="-" Height="100" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1530,115,0,0" Background="#FFFFFF" BorderBrush="Black" BorderThickness="8" FontSize="42" FontWeight="Bold" Click="RemoveButton_Click"/>
+                <Button Name="DeleteButton" Content="x" Height="100" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1530,220,0,0" Background="#FFFFFF" BorderBrush="Black" BorderThickness="8" FontSize="42" FontWeight="Bold" Click="DeleteButton_Click"/>
+                <Image Source="/img/LOVEiTLogo.png" Height="150" Width="350" Margin="1550,827,20,-274" />
+
+                <Label Margin="1530,332,80,238" BorderBrush="Black" BorderThickness="8" Background="White"/>
+                <TextBlock FontSize="34" FontWeight="Bold" Margin="1550,378,245,273">Total: £</TextBlock>
+                <TextBlock Name="TotalTextBlock" FontSize="34" FontWeight="Bold" Margin="1680,378,105,273"/>
+            </Grid>
+
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="LOVEiT_BAKERY.Checkout_Categorised"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LOVEiT_BAKERY"
+        mc:Ignorable="d"
+         d:DesignHeight="1080" d:DesignWidth="1920">
+    <UserControl.Resources>
+        <DataTemplate x:Key="Prods">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Path=ProdAndPrice}" Width="auto"/>
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid Margin="0,-80,0,80">
+        <Label Name="Label" Background="#FFF0A57B" BorderBrush="Black" BorderThickness="8" FontSize="36" FontWeight="Bold" Margin="310,155,305,10"/>
+        <ListBox x:Name="listBoxItems" ItemTemplate="{StaticResource Prods}" HorizontalAlignment="Left" Height="700" Margin="340,240,0,0" VerticalAlignment="Top" Width="600" BorderBrush="Black" BorderThickness="8"/>
+        <ListBox x:Name="listBoxCheckout" HorizontalAlignment="Left" Height="700" Margin="985,240,0,0" VerticalAlignment="Top" Width="600" BorderBrush="Black" BorderThickness="8"/>
+        <TextBlock Height="30" FontSize="24" FontWeight="Bold" Margin="1070,979,766,71">Total: £</TextBlock>
+        <TextBlock x:Name="TotalTextBlock" Height="30" Width="70" FontSize="24" FontWeight="Bold" Margin="1159,979,691,71"></TextBlock>
+        <Button Name="Back" Content="Back" Height="100" Width="200" Margin="340,945,1380,35" Background="#FFCD3232" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Click="Back_Click"/>
+        <Button Name="Remove" Content="Remove" Height="100" Width="200" Margin="540,945,1180,35" Background="#FFCD3232" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Click="Remove_Click"/>
+        <Button x:Name="Add" Height="100" Width="200" Margin="740,945,980,35" Content="Add" Background="#FF86B47C" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Click="Add_Click"/>
+        <Button x:Name="Confirm" Height="100" Width="200" Margin="1385,945,335,35" Content="Confirm" Background="#FF86B47C" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Click="Confirm_Click"/>
+    </Grid>
+</UserControl>

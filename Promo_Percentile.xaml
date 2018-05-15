@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="LOVEiT_BAKERY.Promo_Percentile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LOVEiT_BAKERY"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <StackPanel>
+        <Grid>
+            <Label Name="PercentilePromo" Content="Precentile Promo Creation" Width="700" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold" Margin="610,140,610,365" Background="#FFF0A57B"/>
+
+            <TextBlock Text="Promotion Name:" FontSize="24" FontWeight="Bold" Margin="645,240,1070,800"/>
+            <TextBox Name="PromoName" Height="45" Width="350" BorderBrush="Black" BorderThickness="8" Margin="885,240,685,794"/>
+
+            <TextBlock Text="Percentage Off:" FontSize="24" FontWeight="Bold" Margin="665,330,1070,715"/>
+            <TextBox Name="Percent" Height="45" Width="250" BorderBrush="Black" BorderThickness="8" Margin="885,330,785,704"/>
+            <TextBlock Text="%" FontSize="24" FontWeight="Bold" Margin="1140,336,740,704"/>
+
+            <TextBlock Text="Product Type:" FontSize="24" FontWeight="Bold" Margin="690,414,1070,626"/>
+            <ComboBox Name="Type" Height="45" Width="350" BorderBrush="Black" BorderThickness="8" Margin="885,414,685,620" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectionChanged="Type_SelectionChanged"/>
+
+            <TextBlock Text="Product:" FontSize="24" FontWeight="Bold" Margin="745,495,1070,545"/>
+            <ComboBox Name="Product" Height="45" Width="350" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="8" Margin="885,495,685,540"/>
+
+            <Button Name="Apply" Content="Apply" Height="100" Width="200" Margin="1080,585,640,395" Background="#FF86B47C" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Click="Apply_Click"/>
+            <Button Name="BackButton" Content="Back" Height="100" Width="200" Margin="875,585,845,395" FontSize="24" FontWeight="Bold" Background="#FFCD3232" BorderBrush="Black" BorderThickness="8" Click="BackButton_Click"/>
+        </Grid>
+    </StackPanel>
+</UserControl>

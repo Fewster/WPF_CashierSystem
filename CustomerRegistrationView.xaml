@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="LOVEiT_BAKERY.CustomerRegistrationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LOVEiT_BAKERY"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid>
+        <StackPanel>
+            <Grid>
+                <Label Content="CUSTOMER REGISTRATION" Margin="545,80,570,-475" FontSize="32" FontWeight="Bold" BorderBrush="Black" BorderThickness="8" Background="#FF7C95C1"/>
+                <Grid Margin="-40,-45,40,45">
+                    <TextBlock Text="First Name:" Margin="685,265,1065,-225"  FontSize="32" FontWeight="Bold"/>
+                    <TextBox Name="FirstNameTextBox" Margin="895,265,725,-90" Height="45" Width="300" BorderBrush="Black" BorderThickness="8" TextChanged="FirstNameTextBox_TextChanged"/>
+
+                    <TextBlock Text="Last Name:" Margin="680,342,1065,-301" FontSize="32" FontWeight="Bold"/>
+                    <TextBox Name="LastNameTextBox" Margin="895,342,725,-167" Height="45" Width="300" BorderBrush="Black" BorderThickness="8" TextChanged="LastNameTextBox_TextChanged"/>
+
+                    <TextBlock Text="Address:" Margin="720,413,1065,-393"  FontSize="32" FontWeight="Bold" RenderTransformOrigin="0.484,0.444"/>
+                    <TextBox Name="AddressTextBox" Margin="895,413,725,-238" Height="45" Width="300" BorderBrush="Black" BorderThickness="8" TextChanged="AddressTextBox_TextChanged"/>
+
+                    <TextBlock Text="Phone Number:" Margin="615,482,1065,-446" FontSize="32" FontWeight="Bold"/>
+                    <TextBox Name="PhoneTextBox" Margin="895,482,725,-307" Height="45" Width="300" BorderBrush="Black" BorderThickness="8" TextChanged="PhoneTextBox_TextChanged"/>
+
+                    <TextBlock Text="Email:" Margin="760,550,1065,-511"  FontSize="32" FontWeight="Bold"/>
+                    <TextBox Name="EmailTextBox" Margin="895,550,560,-375" Height="45" BorderBrush="Black" BorderThickness="8" TextChanged="EmailTextBox_TextChanged"/>
+                </Grid>
+
+                <Button Name="RegistrationButton" Content="Register" FontSize="32" FontWeight="Bold" Height="100" Width="200" Margin="860,565,860,-445" Background="#FF86B47C" BorderBrush="Black" BorderThickness="8" Click="RegistrationButton_Click"/>
+                <Button Name="BackButton" Content="Back" FontSize="32" FontWeight="Bold" Height="100" Width="200" Margin="1110,565,610,-445" Background="#FFCD3232" BorderBrush="Black" BorderThickness="8" Click="BackButton_Click"/>
+            </Grid>
+            <TextBlock x:Name="WarningBlock" Margin="700,500,700,-1" TextAlignment="Center" Height="40"/>
+        </StackPanel>
+        <ContentControl x:Name="ContentControl"/>
+    </Grid>
+</UserControl>

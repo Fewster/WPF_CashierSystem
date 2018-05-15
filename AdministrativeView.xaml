@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="LOVEiT_BAKERY.AdministrativeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LOVEiT_BAKERY"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid>
+        <Grid Margin="210,-35,-210,35">
+            <Label Content="Employees" Background="#FF7C95C1" BorderBrush="Black" BorderThickness="8" FontSize="36" FontWeight="Bold" Height="700" Width="650" Margin="100,90,1170,290"/>
+            <ListBox Name="EmployeeListBox" BorderBrush="Black" BorderThickness="8" Width="400" Height="600" Margin="120,160,1400,320">
+                <ListView Name="EmployeesView" SelectionChanged="EmployeesView_SelectionChanged">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Width="50" DisplayMemberBinding="{Binding staffID}">
+                                <GridViewColumn.Header>
+                                    <GridViewColumnHeader Tag="ID" Click="GridViewColumnHeader_Click">ID</GridViewColumnHeader>
+                                </GridViewColumn.Header>
+                            </GridViewColumn>
+                            <GridViewColumn Width="100" DisplayMemberBinding="{Binding firstName}">
+                                <GridViewColumn.Header>
+                                    <GridViewColumnHeader Tag="Name" Click="GridViewColumnHeader_Click">First Name</GridViewColumnHeader>
+                                </GridViewColumn.Header>
+                            </GridViewColumn>
+                            <GridViewColumn Width="100" DisplayMemberBinding="{Binding surname}">
+                                <GridViewColumn.Header>
+                                    <GridViewColumnHeader Tag="Sex" Click="GridViewColumnHeader_Click">Surname</GridViewColumnHeader>
+                                </GridViewColumn.Header>
+                            </GridViewColumn>
+                            <GridViewColumn Width="110" DisplayMemberBinding="{Binding email}">
+                                <GridViewColumn.Header>
+                                    <GridViewColumnHeader Tag="Email" Click="GridViewColumnHeader_Click">Email</GridViewColumnHeader>
+                                </GridViewColumn.Header>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </ListBox>
+            <Button Name="AddEmployee" Content="Add Employee" Width="200" Height="100" Background="#FF86B47C" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Margin="525,450,1195,530" Click="AddEmployee_Click"/>
+            <Button Name="EditEmployee" Content="Edit Employee" Width="200" Height="100" Background="#FFF0A57B" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Margin="525,555,1195,425" Click="EditEmployee_Click"/>
+            <Button Name="RemoveEmployee" Content="Remove Employee" Width="200" Height="100" Background="#FFCD3232" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Margin="525,660,1195,320" Click="RemoveEmployee_Click"/>
+
+            <Label Content="Contractors" Background="#FF7C95C1" BorderBrush="Black" BorderThickness="8" FontSize="36" FontWeight="Bold" Height="700" Width="650" Margin="755,90,515,290"/>
+            <ListBox Name="ContractorsListBox" BorderBrush="Black" BorderThickness="8" Width="400" Height="600" Margin="775,160,745,320">
+                <ListView Name="ContractorsView" SelectionChanged="ContractorsView_SelectionChanged">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Width="50" DisplayMemberBinding="{Binding ID}">
+                                <GridViewColumn.Header>
+                                    <GridViewColumnHeader Tag="ID" Click="GridViewColumnHeader_Click">ID</GridViewColumnHeader>
+                                </GridViewColumn.Header>
+                            </GridViewColumn>
+                            <GridViewColumn Width="100" DisplayMemberBinding="{Binding extFirstName}">
+                                <GridViewColumn.Header>
+                                    <GridViewColumnHeader Tag="Name" Click="GridViewColumnHeader_Click">First Name</GridViewColumnHeader>
+                                </GridViewColumn.Header>
+                            </GridViewColumn>
+                            <GridViewColumn Width="100" DisplayMemberBinding="{Binding extLastName}">
+                                <GridViewColumn.Header>
+                                    <GridViewColumnHeader Tag="Sex" Click="GridViewColumnHeader_Click">Surname</GridViewColumnHeader>
+                                </GridViewColumn.Header>
+                            </GridViewColumn>
+                            <GridViewColumn Width="110" DisplayMemberBinding="{Binding extEmail}">
+                                <GridViewColumn.Header>
+                                    <GridViewColumnHeader Tag="Email" Click="GridViewColumnHeader_Click">Email</GridViewColumnHeader>
+                                </GridViewColumn.Header>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </ListBox>
+            <Button Name="AddSupplier" Content="Add Supplier" Width="200" Height="100" Background="#FF86B47C" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Margin="1180,345,540,635" Click="AddSupplier_Click"/>
+            <Button Name="AddContractor" Content="Add Contractor" Width="200" Height="100" Background="#FF86B47C" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Margin="1180,450,540,530" Click="AddContractor_Click"/>
+            <Button Name="EditContractor" Content="Edit " Width="200" Height="100" Background="#FFF0A57B" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Margin="1180,555,540,425" Click="EditContractor_Click"/>
+            <Button Name="RemoveContractor" Content="Remove " Width="200" Height="100" Background="#FFCD3232" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Margin="1180,660,540,320" Click="RemoveContractor_Click"/>
+        </Grid>
+
+        <Grid Margin="-1100,680,1100,-680">
+            <Label Name="OtherLabel" Content="Bakers/Contractor Orders" Background="#FF7C95C1" BorderBrush="Black" BorderThickness="8" FontSize="36" FontWeight="Bold" Margin="1171,74,10,687"/>
+            <TextBlock Text="Per Baker:" FontSize="24" FontWeight="Bold" Margin="1355,159,446,886"/>
+            <TextBox Name="OrdersPerBakerTextBox" Height="45" Width="200" BorderBrush="Black" BorderThickness="8" Margin="1494,159,226,876" TextChanged="OrdersPerBakerTextBox_TextChanged"/>
+
+            <TextBlock Text="Per Contractor:" FontSize="24" FontWeight="Bold" Margin="1300,228,446,817"/>
+            <TextBox Name="OrdersPerContractorTextBox" Height="45" Width="200" BorderBrush="Black" BorderThickness="8" Margin="1494,218,226,817" TextChanged="OrdersPerContractorTextBox_TextChanged"/>
+
+            <TextBlock Text="Contractor percentage: " FontSize="24" FontWeight="Bold" Margin="1209,281,446,764"/>
+            <TextBox Name="ContractorsPercentageTextBox" Height="45" Width="200" BorderBrush="Black" BorderThickness="8" Margin="1494,281,226,754" TextChanged="ContractorsPercentageTextBox_TextChanged"/>
+
+            <Button Name="ApplyButton" Content="Apply" Width="200" Height="100" Background="#FF86B47C" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Margin="1699,260,21,720" Click="ApplyButton_Click"/>
+            <TextBlock Name="WarningsTextBlock" TextWrapping="Wrap" FontWeight="Bold" FontSize="18" TextAlignment="Center" Margin="1209,331,248,705"/>
+        </Grid>
+
+        <Grid>
+            <Label Content="Data Generation" Width="790"  Background="#FF7C95C1" BorderBrush="Black" BorderThickness="8" FontSize="36" FontWeight="Bold" Margin="825,770,305,10"/>
+            <Button Name="RandomEmployeeButton" Content="Rand Emp" Background="#FFF0A57B" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Width="150" Height="100" Margin="920,855,850,125" Click="RandomEmployeeButton_Click"/>
+            <Button Name="RandomCustomerButton" Content="Rand Cust" Background="#FFF0A57B" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Width="150" Height="100" Margin="1075,855,695,125" Click="RandomCustomerButton_Click"/>
+            <Button Name="RandomContractorButton" Content="Rand Contr" Background="#FFF0A57B" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Width="150" Height="100" Margin="1230,855,540,125" Click="RandomContractorButton_Click"/>
+            <Button Name="RandomCumsomOrderButton" Content="Rand Ord" Background="#FFF0A57B" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Width="150" Height="100" Margin="920,955,850,25" Click="RandomCumsomOrderButton_Click"/>
+            <Button Name="WipeDataButton" Content="Data Wipe" Background="#FFF0A57B" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Width="150" Height="100" Margin="1385,855,385,125" Click="WipeDataButton_Click"/>
+           
+        </Grid>
+        <Button Name="MainMenuButton" Content="Main Menu" Background="#FFCD3232" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Width="150" Height="100" Margin="1686,61,84,919" RenderTransformOrigin="0.96,-1.87" Click="MainMenuButton_Click"/>
+        <Button Name="SaveAndLogoutButton" Content="Save and Logout" Background="#FFCD3232" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Width="150" Height="100" Margin="1686,181,84,799" RenderTransformOrigin="0.96,-1.87" Click="SaveAndLogoutButton_Click"/>
+    </Grid>
+</UserControl>

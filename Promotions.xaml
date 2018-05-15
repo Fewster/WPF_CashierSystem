@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="LOVEiT_BAKERY.Promotions"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LOVEiT_BAKERY"
+        mc:Ignorable="d"
+        Height="1080" Width="1920">
+    <Grid>
+        <Grid Margin="10,-420,-10,420">
+            <Button Name="CreateNewPromo" Content="Create New Promotion" Height="250" Width="500" HorizontalAlignment="Center" Margin="710,520,710,-500" Background="#FFF0A57B" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold" Click="CreateNewPromo_Click"/>
+            <Button Name="DeletePromo" Content="Delete Promo" Height="100" Width="200" Margin="1010,1180,710,-200" FontSize="24" FontWeight="Bold" Background="#FFF07B7B" BorderBrush="Black" BorderThickness="8" Click="DeletePromo_Click"/>
+            <Button Name="BackButton" Content="Back" Height="100" Width="200" Margin="710,1180,1010,-200" FontSize="24" FontWeight="Bold" Background="#FFCD3232" BorderBrush="Black" BorderThickness="8" Click="BackButton_Click"/>
+        </Grid>
+    </Grid>
+</UserControl>

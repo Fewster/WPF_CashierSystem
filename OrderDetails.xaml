@@ -1,0 +1,66 @@
+﻿<Window x:Class="LOVEiT_BAKERY.OrderDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LOVEiT_BAKERY"
+        mc:Ignorable="d"
+        Title="View Custom Order Details" SizeToContent="WidthAndHeight">
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right">
+            <Label Content="Active/Inactive" FontWeight="Bold"/>
+            <TextBlock x:Name="ActiveOrderTextBlock" Width="150" Margin="5">Active/Inactive</TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right">
+            <Label Content="Order ID" FontWeight="Bold"/>
+            <TextBlock x:Name="IDTextBlock" Width="150" Margin="5">ID</TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right">
+            <Label Content="Customer ID" FontWeight="Bold"/>
+            <TextBlock x:Name="CustIDTextBlock" Width="150" Margin="5">ID</TextBlock>
+        </StackPanel>
+        <DockPanel  HorizontalAlignment="Right">
+            <Label Content="Customer Details" FontWeight="Bold"/>
+            <TextBlock x:Name="CustDetailsTextBlock" TextWrapping="Wrap" Width="150" Margin="5">Name, Phone or Email</TextBlock>
+        </DockPanel>
+        <DockPanel  HorizontalAlignment="Right">
+            <Label Content="Baker ID" FontWeight="Bold"/>
+            <TextBlock x:Name="BakerIDTextBlock" TextWrapping="Wrap" Width="150" Margin="5">ID</TextBlock>
+        </DockPanel>
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right">
+            <Label Content="Baker/Contractor" FontWeight="Bold"/>
+            <TextBlock x:Name="BakerContractorTextBlock" Width="150" Margin="5">Baker/Contractor</TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right">
+            <Label Content="Baker Details" FontWeight="Bold"/>
+            <TextBlock x:Name="BakerDetailsTextBlock" TextWrapping="Wrap" Width="150" Margin="5">Full Name</TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right">
+            <Label Content="Order Size" FontWeight="Bold"/>
+            <TextBlock x:Name="SizeTextBlock" Width="150" Margin="5">Size</TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right">
+            <Label Content="Description" FontWeight="Bold"/>
+            <TextBlock x:Name="DescriptionTextBlock" Width="150" Margin="5">Description</TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right">
+            <Label Content="Price" FontWeight="Bold"/>
+            <TextBlock x:Name="PriceTextBlock" Width="150" Margin="5">£Price</TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right">
+            <Label Content="Paid" FontWeight="Bold"/>
+            <TextBlock x:Name="PaidTextBlock" Width="150" Margin="5">Is paid?</TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right">
+            <Label Content="Ready to collect" FontWeight="Bold"/>
+            <TextBlock x:Name="ReadyToCollectTextBlock" Width="150" Margin="5">Ready to collect?</TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right">
+            <Label Content="Collected" FontWeight="Bold"/>
+            <TextBlock x:Name="CollectedBlock" Width="150" Margin="5" >Is collected?</TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="CloseButton" Content="Close" Width="150" Margin="5" Click="CloseButton_Click" BorderBrush="Black" FontWeight="Bold" BorderThickness="4" Background="#FFCD3232"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

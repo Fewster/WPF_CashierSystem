@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="LOVEiT_BAKERY.CreateNewPromo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LOVEiT_BAKERY"
+        mc:Ignorable="d"
+        d:DesignHeight="1080" d:DesignWidth="1920">
+    <StackPanel>
+        <Grid>
+            <Label x:Name="NEwPROMO" Content="Create New Promotion" Width="1000" Background="#FF7C95C1" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold" Margin="460,115,460,245"/>
+
+            <Button x:Name="Percentile" Content="Percentile Promo" Height="300" Width="300" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold" Margin="670,185,950,595" Background="#FFF0A57B" Click="Percentile_Click"/>
+            <Button x:Name="BuyGetFree" Content="B#G#F Promo" Height="300" Width="300" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold" Margin="975,185,645,595" Background="#FFF0A57B" Click="BuyGetFree_Click"/>
+            <Button x:Name="Save" Content="Save £ Promo" Height="300" Width="300" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold" Margin="670,490,950,290" Background="#FFF0A57B" Click="Save_Click"/>
+
+            <Button x:Name="BackButton" Content="Back" Height="100" Width="200" Margin="975,690,745,290" FontSize="24" FontWeight="Bold" Background="#FFCD3232" BorderBrush="Black" BorderThickness="8" Click="BackButton_Click"/>
+        </Grid>
+    </StackPanel>
+</UserControl>

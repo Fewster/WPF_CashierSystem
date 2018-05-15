@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="LOVEiT_BAKERY.ManageCustomOrders"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LOVEiT_BAKERY"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid>
+        <Grid Margin="210,-35,-210,35">
+            <Label Content="Manage Custom Orders" Background="#FF7C95C1" BorderBrush="Black" BorderThickness="8" FontSize="36" FontWeight="Bold" Height="700" Margin="97,87,960,293"/>
+            <ListBox Name="CustomOrdersListBox" BorderBrush="Black" BorderThickness="8" Height="600" Margin="120,160,1196,320">
+                <ListView Name="CustomOrdersView" SelectionChanged="CustomOrdersView_SelectionChanged">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Width="30" DisplayMemberBinding="{Binding ID}">
+                                <GridViewColumn.Header>
+                                    <GridViewColumnHeader Tag="ID" Click="GridViewColumnHeader_Click">ID</GridViewColumnHeader>
+                                </GridViewColumn.Header>
+                            </GridViewColumn>
+                            <GridViewColumn Width="100" DisplayMemberBinding="{Binding size}">
+                                <GridViewColumn.Header>
+                                    <GridViewColumnHeader Tag="Name" Click="GridViewColumnHeader_Click">Size</GridViewColumnHeader>
+                                </GridViewColumn.Header>
+                            </GridViewColumn>
+                            <GridViewColumn Width="440" DisplayMemberBinding="{Binding description}">
+                                <GridViewColumn.Header>
+                                    <GridViewColumnHeader Tag="Description" Click="GridViewColumnHeader_Click">Description</GridViewColumnHeader>
+                                </GridViewColumn.Header>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </ListBox>
+            <TextBlock Name="Paid" Height="20" Width="70" Margin="746,174,1108,886">Paid</TextBlock>
+            <ComboBox Name="PaidCmb" Height="20" Width="140" Margin="746,199,1038,861" SelectionChanged="PaidCmb_SelectionChanged" BorderBrush="Black" BorderThickness="4"/>
+            <TextBlock Name="ReadyToCollect" Height="20" Width="140" Margin="746,224,1038,826">Ready To Collect</TextBlock>
+            <ComboBox Name="ReadyToCollectCmb" Height="20" Width="140" Margin="746,249,1038,811" SelectionChanged="ReadyToCollectCmb_SelectionChanged" BorderBrush="Black" BorderThickness="4"/>
+            <TextBlock Name="Collected" Height="20" Width="140" Margin="746,276,1038,774">Collected</TextBlock>
+            <ComboBox Name="CollectedCmb" Height="20" Width="140" Margin="746,306,1038,754" SelectionChanged="CollectedCmb_SelectionChanged" BorderBrush="Black" BorderThickness="4"/>
+            <TextBlock Name="Active" Height="20" Width="140" Margin="746,331,1038,729">Active</TextBlock>
+            <ComboBox Name="ActiveOrdersCmb" Height="20" Width="140" Margin="746,356,1038,704" SelectionChanged="ActiveOrdersCmb_SelectionChanged" BorderBrush="Black" BorderThickness="4"/>
+            <TextBlock Name="Assigned" Height="20" Width="140" Margin="746,394,1034,666">Assigned to a baker</TextBlock>
+            <ComboBox Name="AssignedCMB" Height="20" Width="140" Margin="746,419,1034,641" BorderBrush="Black" BorderThickness="4" SelectionChanged="AssignedCMB_SelectionChanged"/>
+            <Button Name="OrderDetailsButton" Content="Order Details" Width="200" Height="100" Background="#FFF0A57B" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Margin="744,555,976,425" Click="OrderDetailsButton_Click"/>
+            <Button Name="EditOrderButton" Content="Edit Order" Width="200" Height="100" Background="#FFCD3232" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Margin="744,660,976,320" Click="EditOrderButton_Click"/>
+            <Button Name="MainMenuButton" Content="Main Menu" Height="100" Background="#FFCD3232" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Margin="1027,100,670,880" Click="MainMenuButton_Click"/>
+            <Button Name="LogoutButton" Content="Save and Logout" Height="100" Background="#FFCD3232" BorderBrush="Black" BorderThickness="8" FontSize="24" FontWeight="Bold" Margin="1027,209,670,771" Click="LogoutButton_Click"/>
+        </Grid>
+    </Grid>
+</UserControl>

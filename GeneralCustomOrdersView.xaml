@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="LOVEiT_BAKERY.GeneralCustomOrdersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LOVEiT_BAKERY"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <StackPanel>
+                <Grid>
+                    <Button Name="CustomerRegButton" Content="Register New Customer" Height="250" Width="500" HorizontalAlignment="Center" Margin="710,265,710,-245" Click="CustomerRegButton_Click" Background="#FF7C95C1" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold"/>
+                    <Button Name="CreateCustomOrderButton" Content="New Custom Order" Height="250" Width="500" HorizontalAlignment="Center" Margin="710,520,710,-500" Click="CreateCustomOrderButton_Click" Background="#FFF0A57B" BorderBrush="Black" BorderThickness="8" FontSize="32" FontWeight="Bold"/>
+                    <Button Name="MMButton" Content="Main Menu" Height="100" Width="200" Margin="860,785,860,-595" FontSize="24" FontWeight="Bold" Background="#FFF07B7B" BorderBrush="Black" BorderThickness="8" Click="MMButton_Click"/>
+                    <Button Name="ManageOrdersButton" Content="Manage Orders" Height="100" Width="200" Margin="710,148,1010,42" FontSize="24" FontWeight="Bold" Background="#FFF07B7B" BorderBrush="Black" BorderThickness="8" Click="ManageOrdersButton_Click"/>
+                    <Button Name="EditCustomerButton" Content="Edit Cust" Height="100" Width="200" Margin="1010,148,710,42" FontSize="24" FontWeight="Bold" Background="#FFF07B7B" BorderBrush="Black" BorderThickness="8" Click="EditCustomerButton_Click"/>
+                </Grid>
+            </StackPanel>
+            <ContentControl x:Name="ContentControl" Grid.Row="1"/>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

@@ -1,0 +1,42 @@
+﻿<Window x:Class="LOVEiT_BAKERY.AddingNewEmployee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LOVEiT_BAKERY"
+        mc:Ignorable="d"
+        Title="Adding New Employee" SizeToContent="WidthAndHeight">
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right">
+            <Label Content="First Name" FontWeight="Bold"/>
+            <TextBox x:Name="FirstNameTextBox" Width="150" Margin="5" BorderBrush="Black" BorderThickness="4" TextChanged="FirstNameTextBox_TextChanged"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Label Content="Surname" FontWeight="Bold"/>
+            <TextBox x:Name="SurnameTextBox" Width="150" Margin="5" BorderBrush="Black" BorderThickness="4" TextChanged="SurnameTextBox_TextChanged"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Label Content="Address" FontWeight="Bold"/>
+            <TextBox x:Name="AddressTextBox" Width="150" Margin="5" BorderBrush="Black" BorderThickness="4" TextChanged="AddressTextBox_TextChanged"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Label Content="Phone Number" FontWeight="Bold"/>
+            <TextBox x:Name="PhoneNumberTextBox"  Width="150" Margin="5" BorderBrush="Black" BorderThickness="4" TextChanged="PhoneNumberTextBox_TextChanged"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Label Content="Email" FontWeight="Bold"/>
+            <TextBox x:Name="EmailTextBox"  Width="150" Margin="5" BorderBrush="Black" BorderThickness="4" TextChanged="EmailTextBox_TextChanged"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+            <Label Content="Baker?" FontWeight="Bold"/>
+            <CheckBox x:Name="BakerBox"  Width="150" Margin="5" BorderBrush="Black" BorderThickness="4"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <TextBlock x:Name="WartingBlock"  Width="310" Margin="5" TextAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="SaveButton" Content="Save" FontWeight="Bold"  Background="#FF86B47C" BorderBrush="Black" BorderThickness="4" Width="150" Margin="5" Click="SaveButton_Click"/>
+            <Button x:Name="CancelButton" Content="Cancel" FontWeight="Bold" Background="#FFCD3232" BorderBrush="Black" BorderThickness="4" Width="150" Margin="5" Click="CancelButton_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
